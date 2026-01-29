@@ -54,10 +54,9 @@ void solve(){
         }
     }
     cout << a.size() << endl;
-    for(int i:a){
-        cout<<i<<" ";
-    }
-    cout<<endl;
+    for(int i : a) cout << i << " ";
+    cout << endl;
+
 }
 
 int32_t main() {
