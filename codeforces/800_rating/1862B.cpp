@@ -53,6 +53,7 @@ void solve(){
             a.pb(b[i]);
         }
     }
+    cout << a.size() << endl;
     for(int i:a){
         cout<<i<<" ";
     }
