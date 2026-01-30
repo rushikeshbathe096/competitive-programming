@@ -22,7 +22,7 @@ Output:
 /*
 Approach:
 For each cell (i, j) with 'X', compute the minimum distance to any edge:
-   - m = min(i, j, 9-i, 9-j) , Ring points = m + 1 (outermost = 1, center = 5), Sum points of all 'X' in the 10x10 grid, Print the total for each test case
+   - m = min(i, j, 9-i, 9-j) , Ring points = m + 1 (outermost = 1, center = 5), Sum points of all 'X' in the 10x10 grid
 */
 #include <bits/stdc++.h>
 using namespace std;
