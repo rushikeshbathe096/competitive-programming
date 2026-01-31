@@ -1,5 +1,5 @@
 /*
-Problem: Grasshopper Jumps
+Problem: Grasshopper on a line
 
 Description:
 You are given two integers x and k. A grasshopper starts at point 0 on the OX axis.In one move, it can jump some integer distance, not divisible by k, to the left or right. Determine the smallest number of moves it takes to reach point x, and print any valid sequence of moves.
@@ -11,8 +11,7 @@ Output:
 For each test case:- First line: n — the minimal number of moves. Second line: n integers — the moves (positive for right, negative for left), none divisible by k.
 
 Approach:
-- If x is not divisible by k, one jump of x .
-- If x is divisible by k, use two jumps: x-1 and 1 (both not divisible by k). 
+- If x is not divisible by k, one jump of x . If x is divisible by k, use two jumps: x-1 and 1. 
 */
 #include <bits/stdc++.h>
 using namespace std;
