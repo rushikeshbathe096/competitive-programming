@@ -1,3 +1,22 @@
+/*
+Problem: United We Stand
+
+Description:
+Given an array a of length n, split it into two non-empty arrays b and c such that for every bi in b and every cj in c, cj is not a divisor of bi.
+
+Input:
+t test cases.
+For each test case:
+- Integer n: length of array a
+- n integers a1, a2, ..., an
+
+Output:
+For each test case:
+- Output -1 if such arrays do not exist. Otherwise, output lengths and elements of arrays b and c.
+
+Approach:
+Push all occurrences of the minimum element into array b and all remaining elements into array c; if array c is empty, output -1, otherwise output b and c.
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -25,6 +44,7 @@ void solve() {
         mini=min(mini,a[i]);
     }
     vi b;
+    vi c;
     for(int i=0;i<n;i++){
         if(a[i]==mini){
             b.pb(a[i]);
