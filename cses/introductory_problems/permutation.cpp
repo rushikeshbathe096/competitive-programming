@@ -14,7 +14,7 @@ Output:
 - Print a beautiful permutation of integers from 1 to n
 - If no valid permutation exists, print "NO SOLUTION"
 
-Approach / Notes:
+Approach:
 - If n is 2 or 3, no beautiful permutation exists.Otherwise,first print all odd numbers in increasing order, followed by all even numbers in increasing order.
 */
 

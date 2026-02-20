@@ -1,3 +1,35 @@
+/*
+Problem: Two Knights
+
+Description:
+Given an integer n, for each k = 1, 2, ..., n, count the number of ways to place two knights on a k x k chessboard such that they do not attack each other.
+Knights attack in an "L" shape: two squares in one direction and one square perpendicular.
+
+Input:
+- n : a single integer (1 ≤ n ≤ 10000)
+
+Output:
+- Print n integers, each representing the number of valid placements for k = 1 to n.
+
+Example:
+Input:
+8
+Output:
+0
+6
+28
+96
+252
+550
+1056
+1848
+
+Approach / Notes:
+- Total ways to place 2 knights on k x k board: k*k * (k*k - 1) / 2
+- Subtract placements where knights attack each other: 4 * (k-1)*(k-1)
+- Iterate k = 1 to n and compute for each.
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

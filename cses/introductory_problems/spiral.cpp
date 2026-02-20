@@ -1,3 +1,20 @@
+/*
+Problem: Number Spiral
+
+Description:
+Given coordinates (x, y) in an infinite number spiral, print the number at that position. 
+The spiral starts with 1 at (1,1) and fills layers in a square pattern.
+
+Input:
+- t : number of test cases
+- For each test case:
+    - x, y : integers representing coordinates (1-indexed)
+
+Output:
+- For each test case, print the number at position (x, y).
+
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
