@@ -2,13 +2,13 @@
 Problem: Repetitions
 
 Description:
-You are given a DNA sequence: a string consisting of characters A, C, G, and T. Your task is to find the longest repetition in the sequence. This is a maximum-length substring containing only one type of character.
+Modify array such that it is increasing
 
 Input:
-- string of n characters
+- n -size of array and array of n integers
 
 Output:
-- length of longest repetition
+- min no of moves to make array increasing
 
 Approach:
 - Iterate through the string and count consecutive characters. Keep track of the maximum count for any character
@@ -34,19 +34,20 @@ typedef unordered_map<int,int> ump;
 typedef pair<int,int> p;
 
 void solve() {
-    string s;
-    cin>>s;
-    int cnt=1,maxcnt=1;
-    for(int i=1;i<s.size();i++){
-        if(s[i]==s[i-1]){   
-            cnt++;
-        }
-        else{
-            cnt=1;
-        }
-        maxcnt=max(maxcnt,cnt);
+    int n;
+    cin>>n;
+    vi a(n);
+    for(int i=0;i<n;i++){
+        cin>>a[i];
     }
-    cout<<maxcnt<<endl;
+    int moves=0;
+    for(int i=1;i<n;i++){
+        if(a[i]<a[i-1]){
+            moves+=(a[i-1]-a[i]);
+            a[i]=a[i-1];
+        }
+    }
+    cout<<moves<<endl;
 }
 
 int32_t main() {
