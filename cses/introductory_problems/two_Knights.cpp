@@ -24,7 +24,7 @@ Output:
 1056
 1848
 
-Approach / Notes:
+Approach:
 - Total ways to place 2 knights on k x k board: k*k * (k*k - 1) / 2
 - Subtract placements where knights attack each other: 4 * (k-1)*(k-1)
 - Iterate k = 1 to n and compute for each.

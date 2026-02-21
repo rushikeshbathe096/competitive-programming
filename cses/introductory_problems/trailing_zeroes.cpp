@@ -18,7 +18,7 @@ Input:
 Output:
 4
 
-Approach / Notes:
+Approach :
 - Count how many times 5 divides numbers from 1 to n:
     - zeros = n/5 + n/25 + n/125 + ... until n/(5^k) = 0
 - This gives the number of trailing zeros in O(log_5 n) time.

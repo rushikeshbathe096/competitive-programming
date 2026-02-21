@@ -1,3 +1,18 @@
+/*
+Problem: Two Sets
+
+Description:
+Your task is to divide the numbers 1,2,..,n into two sets of equal sum.
+
+Input:
+- n : a single integer (1 ≤ n ≤ 10^6)
+
+Output:
+After this, if the division is possible, print an example of how to create the sets. First, print the number of elements in the first set followed by the elements themselves in a separate line, and then, print the second set in a similar way.
+
+Approach:
+- If sum/2 is odd, it's impossible to divide into two sets of equal sum. Otherwise fill one set with the largest numbers until we reach sum/2, and put the rest in the other set.
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
