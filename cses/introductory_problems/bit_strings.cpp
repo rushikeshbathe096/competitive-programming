@@ -16,9 +16,7 @@ Output:
 8
 
 Approach :
-- Count how many times 5 divides numbers from 1 to n:
-    - zeros = n/5 + n/25 + n/125 + ... until n/(5^k) = 0
-- This gives the number of trailing zeros in O(log_5 n) time.
+- Use binary exponentiation: while n > 0, multiply ans by base if the current bit is 1, square the base, and shift n right.
 */
 #include <bits/stdc++.h>
 using namespace std;
@@ -44,14 +42,20 @@ void solve() {
     int n;
     cin>>n;
     int ans=1;
-    
+    int base =2;
+    while(n>0){
+        if(n&1)ans=(ans*base)%MOD;
+        base=(base*base)%MOD;
+        n>>=1;
+    }
+    cout<<ans<<endl;
 }
 
 int32_t main() {
     fastio;
 
     int t = 1;
-    cin >> t;
+    //cin >> t;
     while (t--) solve();
 
     return 0;
