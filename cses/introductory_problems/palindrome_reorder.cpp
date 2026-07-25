@@ -1,3 +1,23 @@
+/*
+Problem:
+Given a string consisting of uppercase English letters, rearrange its characters to form a palindrome if possible.
+
+Example:
+Input: AAAACACBA
+Output: AAACBCAAA
+
+Approach:
+Count the frequency of each character using a map. If more than one character has an odd frequency, forming a palindrome is impossible. Otherwise, place half of each even-frequency character in the first half, all odd occurrences in the middle, and mirror the first half to construct the palindrome.
+
+Time Complexity:
+O(n log k), where n is the length of the string and k is the number of distinct characters, due to map operations.
+
+Space Complexity:
+O(k), where k is the number of distinct characters stored in the map.
+
+Edge Cases:
+Strings with more than one odd-frequency character, a single character, all identical characters, and strings already forming a palindrome.
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
