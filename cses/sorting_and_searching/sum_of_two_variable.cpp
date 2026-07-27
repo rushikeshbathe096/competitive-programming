@@ -90,7 +90,7 @@ void solve(){
     cin>>n>>x;
     vector<int> a(n);
     for(int i=0;i<n;i++)cin>>a[i];
-    ordered_map<int,int> mp;
+    map<int,int> mp;
     for(int i=0;i<n;i++){
         int comp=x-a[i];
         if(mp.find(comp)!=mp.end()){
